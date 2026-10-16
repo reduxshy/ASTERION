@@ -1,0 +1,31 @@
+:root {
+  --md-primary-fg-color: #5267d8;
+  --md-primary-fg-color--light: #8190f2;
+  --md-primary-fg-color--dark: #3445a8;
+  --md-accent-fg-color: #a78bfa;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #151720;
+  --md-default-bg-color--light: #1c2030;
+  --md-code-bg-color: #202437;
+}
+
+.md-header,
+.md-tabs {
+  background: linear-gradient(110deg, #3347a8, #6845a5);
+}
+
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.8rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+}
