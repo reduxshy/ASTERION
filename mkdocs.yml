@@ -1,0 +1,52 @@
+site_name: ASTERION Wiki
+site_description: Официальная база знаний Minecraft-сервера ASTERION
+site_url: https://reduxshy.github.io/ASTERION.github.io/
+repo_url: https://github.com/reduxshy/ASTERION.github.io
+repo_name: reduxshy/ASTERION.github.io
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на светлую тему
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на тёмную тему
+nav:
+  - Главная: index.md
+  - Начало игры:
+      - Подключение: getting-started/connect.md
+  - Правила:
+      - Правила сервера: rules/index.md
+  - Справочник:
+      - Обзор: guide/index.md
+      - Команды: guide/commands.md
+  - Система сервера:
+      - Плагины: server/plugins.md
+      - Датапаки: server/datapacks.md
+  - Поддержка:
+      - Сообщество и помощь: community/index.md
+  - Обновления: changelog.md
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
