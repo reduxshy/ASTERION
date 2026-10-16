@@ -4,9 +4,10 @@
 
 Здесь собрана базовая информация о подключении, серверных плагинах и датапаках. Правила, игровые команды и дополнительные механики будут описаны после подтверждения актуальных настроек.
 
+
 <div class="grid cards" markdown>
 
--   :material-rocket-launch:{ .lg .middle } **Начало игры**
+- :material-rocket-launch:{ .lg .middle } **Начало игры**
 
     ---
 
@@ -14,31 +15,32 @@
 
     [:octicons-arrow-right-24: Как подключиться](getting-started/connect.md)
 
--   :material-puzzle:{ .lg .middle } **Плагины**
+- :material-puzzle:{ .lg .middle } **Плагины**
 
     ---
 
-    Список плагинов, замеченных в папке сервера.
+    Список плагинов сервера ASTERION.
 
     [:octicons-arrow-right-24: Открыть список](server/plugins.md)
 
--   :material-package-variant:{ .lg .middle } **Датапаки**
+- :material-package-variant:{ .lg .middle } **Датапаки**
 
     ---
 
-    Датапаки, присутствующие в предоставленном списке.
+    Список датапаков сервера ASTERION.
 
     [:octicons-arrow-right-24: Открыть список](server/datapacks.md)
 
--   :material-lifebuoy:{ .lg .middle } **Сообщество**
+- :material-lifebuoy:{ .lg .middle } **Сообщество**
 
     ---
 
-    Официальная ссылка на Discord ASTERION.
+    Официальный Discord-сервер ASTERION.
 
     [:octicons-arrow-right-24: Поддержка](community/index.md)
 
 </div>
+
 
 ## Информация о сервере
 
