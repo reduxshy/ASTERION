@@ -1,5 +1,9 @@
-
-# ASTERION
+---
+title: ASTERION
+hide:
+  - navigation
+  - toc
+---
 
 <div class="asterion-hero" markdown>
 
@@ -35,7 +39,7 @@
 
     Всё, что нужно для подключения к серверу и первого входа.
 
-    [Как подключиться](getting-started/connect/)
+    [Как подключиться](getting-started/connect.md)
 
 -   :material-shield-check:{ .asterion-icon }
 
@@ -45,7 +49,7 @@
 
     Ознакомься с требованиями, ограничениями и системой наказаний.
 
-    [Читать правила](rules/)
+    [Читать правила](rules/index.md)
 
 -   :material-cancel:{ .asterion-icon }
 
@@ -55,7 +59,7 @@
 
     Список запрещённых модификаций, категорий и соответствующих санкций.
 
-    [Открыть список](rules/forbidden-mods/)
+    [Открыть список](rules/forbidden-mods.md)
 
 -   :material-puzzle:{ .asterion-icon }
 
@@ -65,7 +69,7 @@
 
     Справочная информация о механиках и компонентах сервера.
 
-    [Изучить компоненты](server/plugins/)
+    [Изучить компоненты](server/plugins.md)
 
 </div>
 
@@ -73,7 +77,7 @@
 
 <div class="asterion-info-panel" markdown>
 
-<div class="asterion-info-heading">
+<div class="asterion-info-heading" markdown>
 
 :material-server-network: **Параметры ASTERION**
 
@@ -93,15 +97,15 @@
 
 <div class="asterion-update" markdown>
 
-<div class="asterion-update-icon">:material-history:</div>
+<div class="asterion-update-icon" markdown="span">:material-history:</div>
 
-<div>
+<div markdown>
 
 **Изменения и новые материалы**
 
 Следи за обновлениями правил, списка запрещённых модов и руководств. Актуальные требования публикуются в соответствующих разделах вики.
 
-[Перейти к правилам](rules/) · [Запрещённые моды](rules/forbidden-mods/)
+[Перейти к правилам](rules/index.md) · [Запрещённые моды](rules/forbidden-mods.md)
 
 </div>
 </div>
@@ -128,7 +132,7 @@
 
     Подключайся к ASTERION и исследуй игровой мир.
 
-    [Инструкция по подключению](getting-started/connect/)
+    [Инструкция по подключению](getting-started/connect.md)
 
 </div>
 
