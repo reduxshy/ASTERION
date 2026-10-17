@@ -1,20 +1,72 @@
-
 /* ========================================
-   ASTERION — главная страница
-   Dark / Violet / Minimal
+   ASTERION — единый стиль всех страниц
+   Dark / Violet / Minimal (чёрный фон)
    ======================================== */
 
 :root {
-  --asterion-bg: #08080b;
-  --asterion-surface: #111116;
-  --asterion-surface-hover: #17131f;
-  --asterion-border: #292832;
+  --asterion-bg: #050507;
+  --asterion-surface: #0d0d12;
+  --asterion-surface-hover: #15111d;
+  --asterion-border: #25242d;
   --asterion-violet: #8b5cf6;
   --asterion-violet-light: #c4b5fd;
   --asterion-text-muted: #aaa6bb;
 }
 
-/* Убираем стандартную карточку только на главной */
+/* ---------- Глобальный чёрный фон ---------- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #050507;
+  --md-default-bg-color--light: #0c0c11;
+  --md-default-bg-color--lighter: #101016;
+  --md-default-bg-color--lightest: #15151c;
+  --md-primary-fg-color: #050507;
+  --md-primary-bg-color: #f4f0ff;
+  --md-accent-fg-color: #a78bfa;
+  --md-typeset-a-color: #b9a2ff;
+  --md-code-bg-color: #14111d;
+  --md-code-fg-color: #e6ddff;
+  --md-footer-bg-color: #050507;
+  --md-footer-bg-color--dark: #030305;
+  --md-typeset-table-color: #25242d;
+}
+
+body,
+.md-main {
+  background: #050507;
+}
+
+.md-header,
+.md-tabs {
+  background: #050507;
+  box-shadow: none;
+}
+
+.md-header {
+  border-bottom: 1px solid #1a1822;
+}
+
+.md-tabs {
+  border-bottom: 1px solid #14121a;
+}
+
+.md-footer,
+.md-footer-meta {
+  background: #050507;
+}
+
+.md-typeset code {
+  color: #e6ddff;
+  background: #17131f;
+  border-radius: 5px;
+}
+
+.md-typeset hr {
+  border-bottom-color: #1d1b25;
+}
+
+/* ---------- Главные блоки страниц ---------- */
+
+/* Убираем стандартную карточку на страницах с hero */
 body:has(.asterion-hero) .md-content__inner {
   background: transparent;
   border: 0;
@@ -33,8 +85,8 @@ body:has(.asterion-hero) .md-content__inner {
       rgb(139 92 246 / 16%),
       transparent 48%
     ),
-    linear-gradient(135deg, #15111e 0%, #0e0e13 65%);
-  border: 1px solid #342743;
+    linear-gradient(135deg, #130f1b 0%, #09090c 65%);
+  border: 1px solid #302340;
   border-radius: 18px;
 }
 
@@ -167,7 +219,7 @@ body:has(.asterion-hero) .md-content__inner {
   color: #62566e;
 }
 
-/* Заголовки разделов главной */
+/* Заголовки разделов */
 body:has(.asterion-hero) .md-typeset h2 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
@@ -175,13 +227,18 @@ body:has(.asterion-hero) .md-typeset h2 {
   letter-spacing: -0.025em;
 }
 
-/* Карточки быстрого доступа */
+body:has(.asterion-hero) .md-typeset h3 {
+  margin-top: 1.8rem;
+  letter-spacing: -0.02em;
+}
+
+/* Карточки */
 .md-typeset .asterion-cards > ul > li,
 .md-typeset .asterion-community > ul > li {
   position: relative;
   overflow: hidden;
   padding: 1.15rem;
-  background: linear-gradient(145deg, #131219, #0f0f14);
+  background: linear-gradient(145deg, #101015, #0a0a0e);
   border: 1px solid var(--asterion-border);
   border-radius: 12px;
   transition:
@@ -193,7 +250,7 @@ body:has(.asterion-hero) .md-typeset h2 {
 .md-typeset .asterion-cards > ul > li:hover,
 .md-typeset .asterion-community > ul > li:hover {
   transform: translateY(-3px);
-  background: linear-gradient(145deg, #191321, #111016);
+  background: linear-gradient(145deg, #171120, #0e0d13);
   border-color: #7652c7;
 }
 
@@ -218,7 +275,7 @@ body:has(.asterion-hero) .md-typeset h2 {
 .md-typeset .asterion-cards hr,
 .md-typeset .asterion-community hr {
   margin: 0.8rem 0;
-  border-color: #292330;
+  border-color: #25202c;
 }
 
 .md-typeset .asterion-cards a,
@@ -232,12 +289,16 @@ body:has(.asterion-hero) .md-typeset h2 {
   color: #ddd0ff;
 }
 
-/* Информация о сервере */
+/* Информационные панели и таблицы */
 .asterion-info-panel {
   padding: 1.2rem;
-  background: #101015;
-  border: 1px solid #292832;
+  background: #0b0b10;
+  border: 1px solid #25242d;
   border-radius: 12px;
+}
+
+.asterion-info-panel + .asterion-info-panel {
+  margin-top: 1rem;
 }
 
 .asterion-info-heading {
@@ -255,24 +316,35 @@ body:has(.asterion-hero) .md-typeset h2 {
   font-size: 0.78rem;
 }
 
-.md-typeset .asterion-info-panel table {
+.md-typeset .asterion-info-panel table:not([class]) {
+  display: table;
+  width: 100%;
   margin: 0;
   border: 0;
   border-radius: 0;
   background: transparent;
+  box-shadow: none;
+}
+
+.md-typeset .asterion-info-panel table:not([class]) th {
+  background: transparent;
+  color: var(--asterion-text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .md-typeset .asterion-info-panel tr,
 .md-typeset .asterion-info-panel td,
 .md-typeset .asterion-info-panel th {
-  border-color: #292832;
+  border-color: #25242d;
 }
 
 .md-typeset .asterion-info-panel tr:last-child td {
   border-bottom: 0;
 }
 
-/* Последние обновления */
+/* Блок «Последние обновления» */
 .asterion-update {
   display: flex;
   align-items: flex-start;
@@ -280,8 +352,8 @@ body:has(.asterion-hero) .md-typeset h2 {
   padding: 1.25rem;
   background:
     linear-gradient(115deg, rgb(139 92 246 / 9%), transparent 75%),
-    #111116;
-  border: 1px solid #392a4c;
+    #0b0b10;
+  border: 1px solid #342746;
   border-radius: 12px;
 }
 
@@ -314,7 +386,7 @@ body:has(.asterion-hero) .md-typeset h2 {
 .asterion-bottom-note {
   margin-top: 2.5rem;
   padding: 1.3rem 0 0.5rem;
-  border-top: 1px solid #28232f;
+  border-top: 1px solid #1f1b26;
   color: #8f879f;
   font-size: 0.8rem;
 }
@@ -326,6 +398,28 @@ body:has(.asterion-hero) .md-typeset h2 {
 .asterion-bottom-note strong {
   color: #c4b5fd;
   letter-spacing: 0.08em;
+}
+
+/* Записи в журнале обновлений */
+.asterion-entry {
+  margin: 0 0 1rem;
+  padding: 1.2rem 1.3rem;
+  background: #0b0b10;
+  border: 1px solid #25242d;
+  border-left: 3px solid #8b5cf6;
+  border-radius: 12px;
+}
+
+.asterion-entry-date {
+  margin: 0 0 0.5rem;
+  color: var(--asterion-violet-light);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.asterion-entry h3 {
+  margin-top: 0 !important;
 }
 
 /* Адаптация для мобильных устройств */
@@ -366,7 +460,7 @@ body:has(.asterion-hero) .md-typeset h2 {
   }
 }
 
-/* Учитываем настройки уменьшения анимации */
+/* Уменьшенная анимация по настройкам системы */
 @media (prefers-reduced-motion: reduce) {
   .asterion-button,
   .md-typeset .asterion-cards > ul > li,
@@ -375,7 +469,7 @@ body:has(.asterion-hero) .md-typeset h2 {
   }
 }
 
-/* Главная: скрываем стандартный заголовок страницы */
+/* Скрываем стандартный заголовок страницы, если он есть */
 body:has(.asterion-hero) .md-content__inner > h1:first-child {
   display: none;
 }
