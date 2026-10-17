@@ -11,19 +11,20 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.footer
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.code.copy
   palette:
     - scheme: slate
-      primary: indigo
-      accent: deep purple
+      primary: black
+      accent: amber
       toggle:
         icon: material/brightness-7
         name: Переключить на светлую тему
     - scheme: default
-      primary: indigo
-      accent: deep purple
+      primary: grey
+      accent: amber
       toggle:
         icon: material/brightness-4
         name: Переключить на тёмную тему
@@ -32,7 +33,8 @@ nav:
   - Начало игры:
       - Подключение: getting-started/connect.md
   - Правила:
-      - Правила сервера: rules/index.md
+      - Обзор правил: rules/index.md
+      - Запрещённые моды: rules/forbidden-mods.md
   - Справочник:
       - Обзор: guide/index.md
       - Команды: guide/commands.md
