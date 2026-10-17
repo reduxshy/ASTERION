@@ -598,3 +598,10 @@ body,
     0 0 22px rgb(99 102 241 / 22%),
     0 0 46px rgb(139 92 246 / 14%);
 }
+
+/* Небольшие изображения рецептов: без размытия и растягивания */
+.md-typeset img.asterion-recipe {
+  width: auto;
+  max-width: min(100%, 484px);
+  image-rendering: pixelated;
+}
