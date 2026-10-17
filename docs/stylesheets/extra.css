@@ -562,3 +562,39 @@ body,
     transition: none;
   }
 }
+
+/* ========================================
+   Фиолетовая верхняя плашка (шапка и вкладки)
+   ======================================== */
+.md-header {
+  background: linear-gradient(90deg, #1a0f33 0%, #2b1561 50%, #1a0f33 100%) !important;
+  border-bottom: 1px solid #4c3a8f !important;
+}
+
+.md-tabs {
+  background: #130b28 !important;
+  border-bottom: 1px solid #7c3aed !important;
+}
+
+/* ========================================
+   Скриншоты и галерея
+   ======================================== */
+.asterion-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.asterion-gallery > p {
+  margin: 0;
+}
+
+.md-typeset img.asterion-shot {
+  display: block;
+  width: 100%;
+  border: 1px solid #3a2f66;
+  border-radius: 12px;
+  box-shadow:
+    0 0 22px rgb(99 102 241 / 22%),
+    0 0 46px rgb(139 92 246 / 14%);
+}
