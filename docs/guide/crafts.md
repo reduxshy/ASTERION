@@ -38,11 +38,15 @@ title: Новые крафты
 
 </div>
 
-## Остальные крафты
+## Скриншоты
 
-!!! info "Раздел пополняется"
+<div class="asterion-gallery" markdown>
 
-    Здесь появятся рецепты кастомных предметов сервера. Если хотите узнать о конкретном рецепте раньше, спросите в [Discord](https://discord.gg/FGb8aVEJQ).
+![Крафты ASTERION, скриншот 1](https://cdn.modrinth.com/data/uE97WYCE/images/fb825c4143c612d4b9987138a69ed5040919dad5.jpeg){ .asterion-shot loading=lazy }
+
+![Крафты ASTERION, скриншот 2](https://cdn.modrinth.com/data/cached_images/84ecec38b61ffc1acb98584d926b5f44ce4cef07.png){ .asterion-shot loading=lazy }
+
+</div>
 
 <!--
 Шаблон для нового рецепта (скопируйте и заполните):
