@@ -374,3 +374,14 @@ body:has(.asterion-hero) .md-typeset h2 {
     transition: none;
   }
 }
+
+/* Главная: скрываем стандартный заголовок страницы */
+body:has(.asterion-hero) .md-content__inner > h1:first-child {
+  display: none;
+}
+
+/* Поиск не нужен — убираем его из интерфейса */
+.md-header__button[for="__search"],
+.md-search {
+  display: none !important;
+}
