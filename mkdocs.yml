@@ -1,8 +1,10 @@
 site_name: ASTERION Wiki
 site_description: Официальная база знаний Minecraft-сервера ASTERION
-site_url: https://reduxshy.github.io/ASTERION.github.io/
-repo_url: https://github.com/reduxshy/ASTERION.github.io
-repo_name: reduxshy/ASTERION.github.io
+# Проверьте: адрес должен совпадать с реальным адресом сайта и именем репозитория
+site_url: https://reduxshy.github.io/ASTERION/
+repo_url: https://github.com/reduxshy/ASTERION
+repo_name: reduxshy/ASTERION
+
 theme:
   name: material
   language: ru
@@ -12,22 +14,13 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.indexes
-    - search.suggest
-    - search.highlight
     - content.code.copy
+  # Одна тёмная палитра: CSS рассчитан только на неё
   palette:
-    - scheme: slate
-      primary: black
-      accent: amber
-      toggle:
-        icon: material/brightness-7
-        name: Переключить на светлую тему
-    - scheme: default
-      primary: grey
-      accent: amber
-      toggle:
-        icon: material/brightness-4
-        name: Переключить на тёмную тему
+    scheme: slate
+    primary: black
+    accent: deep purple
+
 nav:
   - Главная: index.md
   - Начало игры:
@@ -44,11 +37,17 @@ nav:
   - Поддержка:
       - Сообщество и помощь: community/index.md
   - Обновления: changelog.md
+
 extra_css:
   - stylesheets/extra.css
+
 markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - tables
   - toc:
-      permalink: true
+      permalink: false
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
