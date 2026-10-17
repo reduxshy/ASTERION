@@ -1,169 +1,376 @@
 
+/* ========================================
+   ASTERION — главная страница
+   Dark / Violet / Minimal
+   ======================================== */
+
 :root {
-  --md-primary-fg-color: #0a0a0d;
-  --md-primary-fg-color--dark: #050507;
-  --md-accent-fg-color: #8b5cf6;
+  --asterion-bg: #08080b;
+  --asterion-surface: #111116;
+  --asterion-surface-hover: #17131f;
+  --asterion-border: #292832;
+  --asterion-violet: #8b5cf6;
+  --asterion-violet-light: #c4b5fd;
+  --asterion-text-muted: #aaa6bb;
 }
 
-[data-md-color-scheme="slate"] {
-  --md-default-bg-color: #08080b;
-  --md-default-fg-color: #eeeeF5;
-  --md-code-bg-color: #15161c;
-  --md-typeset-a-color: #a78bfa;
-}
-
-/* Верхняя панель */
-.md-header,
-.md-tabs {
-  background: #09090c;
-  border-bottom: 1px solid #24242d;
+/* Убираем стандартную карточку только на главной */
+body:has(.asterion-hero) .md-content__inner {
+  background: transparent;
+  border: 0;
   box-shadow: none;
+  padding-top: 1.2rem;
 }
 
-/* Общий фон */
-body,
-.md-container,
-.md-main {
-  background: #08080b;
+.asterion-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  margin: 1rem 0 2.5rem;
+  background:
+    radial-gradient(
+      ellipse at 85% 0%,
+      rgb(139 92 246 / 16%),
+      transparent 48%
+    ),
+    linear-gradient(135deg, #15111e 0%, #0e0e13 65%);
+  border: 1px solid #342743;
+  border-radius: 18px;
 }
 
-/* Центральная область */
-.md-content__inner {
-  background: #0e0f13;
-  border: 1px solid #22232b;
-  border-radius: 14px;
-  padding: 1.8rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+.asterion-hero::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: -100px;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgb(167 139 250 / 12%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 28px rgb(167 139 250 / 3%),
+    0 0 0 56px rgb(167 139 250 / 2%);
+  pointer-events: none;
 }
 
-/* Заголовки */
-.md-typeset h1 {
-  color: #f6f4ff;
+.asterion-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.asterion-eyebrow {
+  margin: 0 0 1rem;
+  color: var(--asterion-violet-light);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.asterion-hero h1 {
+  max-width: 760px;
+  margin: 0 0 1rem;
+  color: #fff;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
   font-weight: 850;
-  letter-spacing: -0.04em;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  background: linear-gradient(100deg, #fff 25%, #c4b5fd 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.md-typeset h2,
-.md-typeset h3 {
-  color: #f1efff;
+.asterion-hero > p:not(.asterion-eyebrow) {
+  max-width: 650px;
+  color: #c1bdce;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.asterion-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.8rem 0 1.4rem;
+}
+
+.asterion-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  padding: 0.7rem 1.05rem;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 0.82rem;
   font-weight: 750;
+  text-decoration: none !important;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
 }
 
-/* Ссылки */
-.md-typeset a {
-  color: #a78bfa;
+.asterion-button:hover {
+  transform: translateY(-2px);
 }
 
-.md-typeset a:hover {
-  color: #c4b5fd;
+.asterion-button-primary {
+  color: #fff !important;
+  background: linear-gradient(110deg, #7c3aed, #8b5cf6);
+  box-shadow: 0 5px 22px rgb(124 58 237 / 18%);
 }
 
-/* Левое меню */
-.md-sidebar {
-  background: #08080b;
+.asterion-button-primary:hover {
+  color: #fff !important;
+  background: linear-gradient(110deg, #6d28d9, #a78bfa);
 }
 
-.md-nav__link {
-  border-radius: 6px;
-  transition: color 0.15s ease;
+.asterion-button-secondary {
+  color: #e4dcff !important;
+  background: rgb(255 255 255 / 3%);
+  border-color: #443650;
 }
 
-.md-nav__link--active {
-  color: #ffffff !important;
-  background: #21162e;
-  border-left: 3px solid #8b5cf6;
-  padding-left: 0.7rem;
-  font-weight: 700;
+.asterion-button-secondary:hover {
+  background: #21182f;
+  border-color: #8b5cf6;
 }
 
-.md-nav__link:hover {
-  color: #c4b5fd !important;
+.asterion-server-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  color: #c7c0d5;
+  font-size: 0.77rem;
 }
 
-/* Карточки */
-.md-typeset .grid.cards > ul > li,
-.md-typeset .grid > .card {
-  background: #111116;
-  border: 1px solid #292832;
+.asterion-server-status code {
+  color: #e6ddff;
+  background: #21182f;
+  border: 1px solid #38264e;
+}
+
+.asterion-status-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 10px rgb(167 139 250 / 45%);
+}
+
+.asterion-status-divider {
+  color: #62566e;
+}
+
+/* Заголовки разделов главной */
+body:has(.asterion-hero) .md-typeset h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+
+/* Карточки быстрого доступа */
+.md-typeset .asterion-cards > ul > li,
+.md-typeset .asterion-community > ul > li {
+  position: relative;
+  overflow: hidden;
+  padding: 1.15rem;
+  background: linear-gradient(145deg, #131219, #0f0f14);
+  border: 1px solid var(--asterion-border);
   border-radius: 12px;
-  box-shadow: none;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
 }
 
-.md-typeset .grid.cards > ul > li:hover {
+.md-typeset .asterion-cards > ul > li:hover,
+.md-typeset .asterion-community > ul > li:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(145deg, #191321, #111016);
   border-color: #7652c7;
 }
 
-/* Информационные блоки */
-.md-typeset .admonition,
-.md-typeset details {
-  background: #17121f;
-  border: 1px solid #46305f;
-  border-left: 4px solid #8b5cf6;
-  border-radius: 10px;
-  box-shadow: none;
+.asterion-icon {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--asterion-violet-light);
+  font-size: 1.65rem;
 }
 
-/* Таблицы */
-.md-typeset table:not([class]) {
-  display: table;
+.md-typeset .asterion-cards > ul > li > p:first-child,
+.md-typeset .asterion-community > ul > li > p:first-child {
+  margin-bottom: 0.6rem;
+}
+
+.md-typeset .asterion-cards strong,
+.md-typeset .asterion-community strong {
+  color: #f4f0ff;
+  font-size: 0.98rem;
+}
+
+.md-typeset .asterion-cards hr,
+.md-typeset .asterion-community hr {
+  margin: 0.8rem 0;
+  border-color: #292330;
+}
+
+.md-typeset .asterion-cards a,
+.md-typeset .asterion-community a {
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.md-typeset .asterion-cards a:hover,
+.md-typeset .asterion-community a:hover {
+  color: #ddd0ff;
+}
+
+/* Информация о сервере */
+.asterion-info-panel {
+  padding: 1.2rem;
+  background: #101015;
+  border: 1px solid #292832;
+  border-radius: 12px;
+}
+
+.asterion-info-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  color: #e9e1ff;
+}
+
+.asterion-info-heading > span {
   width: 100%;
-  background: #101116;
-  border: 1px solid #282932;
-  border-radius: 8px;
-  overflow: hidden;
+  color: var(--asterion-text-muted);
+  font-size: 0.78rem;
 }
 
-.md-typeset table:not([class]) th {
-  background: #191720;
-  color: #e8ddff;
+.md-typeset .asterion-info-panel table {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
-.md-typeset table:not([class]) td,
-.md-typeset table:not([class]) th {
+.md-typeset .asterion-info-panel tr,
+.md-typeset .asterion-info-panel td,
+.md-typeset .asterion-info-panel th {
   border-color: #292832;
 }
 
-/* Поиск */
-.md-search__form {
-  background: #141419;
-  border: 1px solid #292932;
-  border-radius: 8px;
+.md-typeset .asterion-info-panel tr:last-child td {
+  border-bottom: 0;
 }
 
-.md-search__input {
-  color: #ffffff;
+/* Последние обновления */
+.asterion-update {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background:
+    linear-gradient(115deg, rgb(139 92 246 / 9%), transparent 75%),
+    #111116;
+  border: 1px solid #392a4c;
+  border-radius: 12px;
 }
 
-/* Блоки кода */
-.md-typeset pre,
-.md-typeset code {
-  border-radius: 6px;
+.asterion-update-icon {
+  display: flex;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  color: #d5c5ff;
+  background: #281d3a;
+  border-radius: 10px;
+  font-size: 1.35rem;
 }
 
-/* Оглавление справа */
-.md-nav--secondary .md-nav__link--active {
-  background: transparent;
-  border-left: 2px solid #8b5cf6;
+.asterion-update > div:last-child {
+  min-width: 0;
+  flex: 1;
 }
 
-/* Нижняя часть сайта */
-.md-footer {
-  background: #09090c;
-  border-top: 1px solid #24242d;
+.asterion-update strong {
+  color: #f2edff;
 }
 
-/* Компактная ширина бокового меню */
-@media screen and (min-width: 76.25em) {
-  .md-sidebar--primary {
-    width: 12rem;
+.asterion-update p {
+  color: #b8b3c6;
+}
+
+.asterion-bottom-note {
+  margin-top: 2.5rem;
+  padding: 1.3rem 0 0.5rem;
+  border-top: 1px solid #28232f;
+  color: #8f879f;
+  font-size: 0.8rem;
+}
+
+.asterion-bottom-note p {
+  margin-bottom: 0.5rem;
+}
+
+.asterion-bottom-note strong {
+  color: #c4b5fd;
+  letter-spacing: 0.08em;
+}
+
+/* Адаптация для мобильных устройств */
+@media screen and (max-width: 600px) {
+  body:has(.asterion-hero) .md-content__inner {
+    padding: 0.75rem;
+  }
+
+  .asterion-hero {
+    padding: 1.35rem;
+    margin-top: 0.5rem;
+    border-radius: 13px;
+  }
+
+  .asterion-hero h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .asterion-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .asterion-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .asterion-update {
+    gap: 0.7rem;
+    padding: 1rem;
+  }
+
+  .asterion-update-icon {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
   }
 }
 
-/* Мобильная версия */
-@media screen and (max-width: 76.1875em) {
-  .md-content__inner {
-    padding: 1rem;
-    margin-top: 0.8rem;
+/* Учитываем настройки уменьшения анимации */
+@media (prefers-reduced-motion: reduce) {
+  .asterion-button,
+  .md-typeset .asterion-cards > ul > li,
+  .md-typeset .asterion-community > ul > li {
+    transition: none;
   }
 }
