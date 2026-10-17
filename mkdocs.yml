@@ -32,12 +32,8 @@ nav:
       - Обзор: guide/index.md
       - Команды: guide/commands.md
       - Новые крафты: guide/crafts.md
-  - Система сервера:
-      - Плагины: server/plugins.md
-      - Датапаки: server/datapacks.md
   - Поддержка:
       - Сообщество и помощь: community/index.md
-  - Обновления: changelog.md
 
 extra_css:
   - stylesheets/extra.css
