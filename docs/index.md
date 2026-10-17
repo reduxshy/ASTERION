@@ -61,15 +61,15 @@ hide:
 
     [Открыть список](rules/forbidden-mods.md)
 
--   :material-puzzle:{ .asterion-icon }
+-   :material-book-open-variant:{ .asterion-icon }
 
-    **Плагины и датапаки**
+    **Справочник**
 
     ---
 
-    Справочная информация о механиках и компонентах сервера.
+    Команды игрока и новые крафты сервера.
 
-    [Изучить компоненты](server/plugins.md)
+    [Открыть справочник](guide/index.md)
 
 </div>
 
@@ -93,19 +93,19 @@ hide:
 
 </div>
 
-## Последние обновления
+## Справочник игрока
 
 <div class="asterion-update" markdown>
 
-<div class="asterion-update-icon" markdown="span">:material-history:</div>
+<div class="asterion-update-icon" markdown="span">:material-book-open-variant:</div>
 
 <div markdown>
 
-**Изменения и новые материалы**
+**Команды и крафты**
 
-Следи за обновлениями правил, списка запрещённых модов и руководств. Актуальные требования публикуются в соответствующих разделах вики.
+Все команды, доступные без прав оператора, и описание новых крафтов собраны в справочнике.
 
-[Перейти к правилам](rules/index.md) · [Запрещённые моды](rules/forbidden-mods.md)
+[Команды игрока](guide/commands.md) · [Новые крафты](guide/crafts.md)
 
 </div>
 </div>
