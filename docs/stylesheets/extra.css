@@ -494,3 +494,71 @@ body,
 .md-footer-meta {
   background-color: #000000 !important;
 }
+
+/* ========================================
+   Фиолетовая линия под шапкой
+   ======================================== */
+.md-header {
+  border-bottom: 1px solid #2a1d45 !important;
+  box-shadow: none !important;
+}
+
+.md-header[data-md-state="shadow"] {
+  box-shadow: none !important;
+}
+
+.md-tabs {
+  border-bottom: 1px solid #7c3aed !important;
+  box-shadow: 0 2px 18px rgb(124 58 237 / 35%) !important;
+}
+
+/* Фиолетовые ссылки вместо синих */
+.md-typeset a {
+  color: #b9a2ff;
+}
+
+.md-typeset a:hover {
+  color: #ddd0ff;
+}
+
+/* ========================================
+   Свечение плит: фиолетово-синее
+   ======================================== */
+.asterion-hero,
+.md-typeset .asterion-cards > ul > li,
+.md-typeset .asterion-community > ul > li,
+.asterion-info-panel,
+.asterion-update,
+.asterion-entry {
+  border-color: #3a2f66;
+  box-shadow:
+    0 0 0 1px rgb(99 102 241 / 6%),
+    0 0 22px rgb(99 102 241 / 16%),
+    0 0 46px rgb(139 92 246 / 12%);
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.25s ease;
+}
+
+.md-typeset .asterion-cards > ul > li:hover,
+.md-typeset .asterion-community > ul > li:hover,
+.asterion-info-panel:hover,
+.asterion-update:hover,
+.asterion-entry:hover {
+  border-color: #7c6cf0;
+  box-shadow:
+    0 0 0 1px rgb(99 102 241 / 25%),
+    0 0 28px rgb(99 102 241 / 38%),
+    0 0 60px rgb(139 92 246 / 28%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .asterion-hero,
+  .asterion-info-panel,
+  .asterion-update,
+  .asterion-entry {
+    transition: none;
+  }
+}
