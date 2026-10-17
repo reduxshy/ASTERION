@@ -41,7 +41,7 @@ title: Новые крафты
 
 </div>
 
-![Невидимые рамки: ножницы, щётка и стеклянная панель](../assets/crafts/invisible-frames.png){ .asterion-shot loading=lazy }
+![Невидимые рамки: ножницы, щётка и стеклянная панель](https://cdn.modrinth.com/data/uE97WYCE/images/fb825c4143c612d4b9987138a69ed5040919dad5.jpeg){ .asterion-shot loading=lazy }
 
 !!! tip "Как снова разрешить вращение"
 
@@ -71,7 +71,7 @@ title: Новые крафты
 
 </div>
 
-![Рецепт невидимого света: стекло и факел](../assets/crafts/invisible-light.png){ .asterion-shot .asterion-recipe loading=lazy }
+![Рецепт невидимого света: стекло и факел](https://cdn.modrinth.com/data/cached_images/84ecec38b61ffc1acb98584d926b5f44ce4cef07.png){ .asterion-shot .asterion-recipe loading=lazy }
 
 !!! tip "Как увидеть поставленные блоки света"
 
