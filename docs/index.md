@@ -26,13 +26,6 @@ hide:
 </div>
 
 </div>
-
-## Быстрый доступ
-
-<div class="grid cards asterion-cards" markdown>
-
--   :material-rocket-launch:{ .asterion-icon }
-
     **Начало игры**
 
     ---
@@ -41,7 +34,7 @@ hide:
 
     [Как подключиться](getting-started/connect.md)
 
--   :material-shield-check:{ .asterion-icon }
+-   :material-shield-check:{.asterion-icon}
 
     **Правила сервера**
 
@@ -51,7 +44,7 @@ hide:
 
     [Читать правила](rules/index.md)
 
--   :material-cancel:{ .asterion-icon }
+-   :material-cancel:{.asterion-icon}
 
     **Запрещённые моды**
 
@@ -61,7 +54,7 @@ hide:
 
     [Открыть список](rules/forbidden-mods.md)
 
--   :material-puzzle:{ .asterion-icon }
+-   :material-puzzle:{.asterion-icon}
 
     **Плагины и датапаки**
 
