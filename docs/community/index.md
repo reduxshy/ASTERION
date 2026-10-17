@@ -1,18 +1,54 @@
-# Сообщество и поддержка
+---
+title: Справочник
+---
 
-## Discord ASTERION
+<div class="asterion-hero" markdown>
 
-Присоединиться к сообществу: [ASTERION](https://discord.gg/FGb8aVEJQ).
+<p class="asterion-eyebrow">СПРАВОЧНИК</p>
 
-## Обращение за помощью
+# Справочник игрока
 
-При обращении опишите проблему как можно точнее:
+Всё, что пригодится в игре: команды, новые крафты и особенности сервера.
 
-1. Ваш игровой ник.
-2. Что произошло и какие действия привели к проблеме.
-3. Примерное время события.
-4. Текст ошибки или скриншот, если он есть.
+<div class="asterion-hero-actions">
+  <a class="asterion-button asterion-button-primary" href="commands/">Команды <span>→</span></a>
+  <a class="asterion-button asterion-button-secondary" href="crafts/">Новые крафты <span>→</span></a>
+</div>
 
-Не публикуйте пароли, токены и другие секретные данные.
+</div>
 
-Точные каналы поддержки, порядок жалоб и апелляций следует добавить после подтверждения актуальной структуры Discord-сервера.
+## Разделы
+
+<div class="grid cards asterion-cards" markdown>
+
+-   :material-console:{ .asterion-icon }
+
+    **Команды игрока**
+
+    ---
+
+    Регистрация, позы, голосовой чат, AFK и другие команды без прав оператора.
+
+    [Открыть команды](commands.md)
+
+-   :material-hammer-wrench:{ .asterion-icon }
+
+    **Новые крафты**
+
+    ---
+
+    Напитки и кастомные рецепты сервера.
+
+    [Смотреть крафты](crafts.md)
+
+-   :material-shield-check:{ .asterion-icon }
+
+    **Правила**
+
+    ---
+
+    Требования к игрокам и система наказаний.
+
+    [Читать правила](../rules/index.md)
+
+</div>
